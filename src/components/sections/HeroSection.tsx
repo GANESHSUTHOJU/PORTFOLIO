@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Download, Mail, Github, Linkedin, MapPin, Sparkles } from "lucide-react";
-import { TypingText } from "./TypingText";
+import { TypingText } from "../TypingText";
 
 const TECH_BADGES = [
   { label: "React", x: "8%", y: "20%", d: 0 },
