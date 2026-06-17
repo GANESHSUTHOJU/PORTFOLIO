@@ -55,10 +55,10 @@ export function ContactSection() {
               <div className="mt-6 border-t border-white/5 pt-6">
                 <div className="text-xs uppercase tracking-widest text-muted-foreground">Find me on</div>
                 <div className="mt-3 flex gap-2">
-                  <a href="https://linkedin.com/" className="flex items-center gap-2 rounded-xl glass px-4 py-2 text-sm hover:text-primary">
+                  <a href="https://www.linkedin.com/in/ganesh-suthoju-389ab12a6/" className="flex items-center gap-2 rounded-xl glass px-4 py-2 text-sm hover:text-primary">
                     <Linkedin className="h-4 w-4" /> LinkedIn
                   </a>
-                  <a href="https://github.com/" className="flex items-center gap-2 rounded-xl glass px-4 py-2 text-sm hover:text-primary">
+                  <a href="https://github.com/GANESHSUTHOJU" className="flex items-center gap-2 rounded-xl glass px-4 py-2 text-sm hover:text-primary">
                     <Github className="h-4 w-4" /> GitHub
                   </a>
                 </div>
@@ -81,7 +81,7 @@ export function ContactSection() {
                   required
                   value={data.name}
                   onChange={(e) => setData({ ...data, name: e.target.value })}
-                  className="w-full rounded-xl border border-white/10 bg-black/30 px-4 py-3 text-sm outline-none transition focus:border-primary/60 focus:ring-2 focus:ring-primary/20"
+                  className="w-full rounded-xl border border-border bg-black/5 dark:bg-black/30 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground outline-none transition focus:border-primary/60 focus:ring-2 focus:ring-primary/20"
                   placeholder="Your name"
                 />
               </Field>
@@ -91,7 +91,7 @@ export function ContactSection() {
                   type="email"
                   value={data.email}
                   onChange={(e) => setData({ ...data, email: e.target.value })}
-                  className="w-full rounded-xl border border-white/10 bg-black/30 px-4 py-3 text-sm outline-none transition focus:border-primary/60 focus:ring-2 focus:ring-primary/20"
+                  className="w-full rounded-xl border border-border bg-black/5 dark:bg-black/30 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground outline-none transition focus:border-primary/60 focus:ring-2 focus:ring-primary/20"
                   placeholder="you@email.com"
                 />
               </Field>
@@ -103,7 +103,7 @@ export function ContactSection() {
                   rows={5}
                   value={data.message}
                   onChange={(e) => setData({ ...data, message: e.target.value })}
-                  className="w-full resize-none rounded-xl border border-white/10 bg-black/30 px-4 py-3 text-sm outline-none transition focus:border-primary/60 focus:ring-2 focus:ring-primary/20"
+                  className="w-full resize-none rounded-xl border border-border bg-black/5 dark:bg-black/30 px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground outline-none transition focus:border-primary/60 focus:ring-2 focus:ring-primary/20"
                   placeholder="Tell me about your project, role, or idea…"
                 />
               </Field>
@@ -137,9 +137,7 @@ export function Footer() {
         <div className="grid gap-8 md:grid-cols-3">
           <div>
             <div className="flex items-center gap-2">
-              <div className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-primary">
-                <span className="font-display text-sm font-bold text-primary-foreground">SG</span>
-              </div>
+              <img src="/logo.png" alt="Suthoju Ganesh Logo" className="h-9 w-9 rounded-xl object-contain bg-white p-0.5 shadow-sm" />
               <span className="font-display text-base font-semibold">Suthoju Ganesh</span>
             </div>
             <p className="mt-3 max-w-xs text-sm text-muted-foreground">
@@ -159,8 +157,8 @@ export function Footer() {
           <div>
             <div className="text-xs uppercase tracking-widest text-muted-foreground">Social</div>
             <div className="mt-3 flex gap-2">
-              <a href="https://github.com/" className="rounded-full glass p-2.5 hover:text-primary"><Github className="h-4 w-4" /></a>
-              <a href="https://linkedin.com/" className="rounded-full glass p-2.5 hover:text-primary"><Linkedin className="h-4 w-4" /></a>
+              <a href="https://github.com/GANESHSUTHOJU" className="rounded-full glass p-2.5 hover:text-primary"><Github className="h-4 w-4" /></a>
+              <a href="https://www.linkedin.com/in/ganesh-suthoju-389ab12a6/" className="rounded-full glass p-2.5 hover:text-primary"><Linkedin className="h-4 w-4" /></a>
               <a href="mailto:suthojuganesh@gmail.com" className="rounded-full glass p-2.5 hover:text-primary"><Mail className="h-4 w-4" /></a>
             </div>
           </div>

@@ -98,7 +98,7 @@ export function ExperienceSection() {
 
                       <div className={`mt-4 flex flex-wrap gap-2 ${left ? "md:justify-end" : ""}`}>
                         {e.tags.map((t) => (
-                          <span key={t} className="rounded-full border border-white/10 bg-white/5 px-2.5 py-0.5 font-mono text-[10px] text-muted-foreground">
+                          <span key={t} className="rounded-full border border-border bg-muted/50 px-2.5 py-0.5 font-mono text-[10px] text-muted-foreground">
                             {t}
                           </span>
                         ))}

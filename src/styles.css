@@ -90,6 +90,65 @@
   --shadow-glow-primary: 0 0 40px rgba(0, 229, 255, 0.35);
   --shadow-glow-secondary: 0 0 40px rgba(123, 97, 255, 0.35);
   --shadow-elegant: 0 20px 60px -20px rgba(0, 229, 255, 0.25);
+
+  --grid-line: rgba(255, 255, 255, 0.04);
+  --glass-card-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01));
+  --glass-card-border: rgba(255, 255, 255, 0.08);
+}
+
+.light {
+  /* Premium light palette - soft warm gray/blue background with rich slate text */
+  --background: oklch(0.98 0.006 260);
+  --foreground: oklch(0.18 0.012 260);
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.18 0.012 260);
+
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.18 0.012 260);
+
+  /* Primary: Deepened vibrant cyan for readable light mode contrast */
+  --primary: oklch(0.58 0.18 215);
+  --primary-foreground: oklch(0.98 0 0);
+
+  /* Secondary: Deepened vibrant violet for readable light mode contrast */
+  --secondary: oklch(0.52 0.22 285);
+  --secondary-foreground: oklch(0.98 0 0);
+
+  --muted: oklch(0.94 0.008 260);
+  --muted-foreground: oklch(0.46 0.02 260);
+
+  --accent: oklch(0.52 0.22 285);
+  --accent-foreground: oklch(0.98 0 0);
+
+  --destructive: oklch(0.55 0.22 25);
+  --destructive-foreground: oklch(0.98 0 0);
+
+  --border: oklch(0.18 0.012 260 / 8%);
+  --input: oklch(0.18 0.012 260 / 12%);
+  --ring: oklch(0.58 0.18 215);
+
+  /* Gradients & Background patterns */
+  --gradient-primary: linear-gradient(135deg, #00b0ff 0%, #6200ea 100%);
+  --gradient-radial: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(0, 176, 255, 0.12), transparent);
+  --gradient-mesh:
+    radial-gradient(at 20% 20%, rgba(0, 176, 255, 0.06) 0px, transparent 50%),
+    radial-gradient(at 80% 30%, rgba(98, 0, 234, 0.08) 0px, transparent 50%),
+    radial-gradient(at 50% 80%, rgba(0, 176, 255, 0.04) 0px, transparent 50%);
+
+  /* Glass in light mode: bright semi-translucent frosted glass */
+  --glass-bg: rgba(255, 255, 255, 0.65);
+  --glass-border: rgba(0, 0, 0, 0.08);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05);
+
+  /* Shadows */
+  --shadow-glow-primary: 0 0 40px rgba(0, 176, 255, 0.15);
+  --shadow-glow-secondary: 0 0 40px rgba(98, 0, 234, 0.15);
+  --shadow-elegant: 0 20px 60px -20px rgba(0, 176, 255, 0.12);
+
+  --grid-line: rgba(0, 0, 0, 0.05);
+  --glass-card-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.45));
+  --glass-card-border: rgba(0, 0, 0, 0.06);
 }
 
 @layer base {
@@ -123,9 +182,9 @@
 }
 
 @utility glass-card {
-  background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01));
+  background: var(--glass-card-bg);
   backdrop-filter: blur(24px) saturate(160%);
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid var(--glass-card-border);
   border-radius: var(--radius-xl);
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -156,8 +215,8 @@
 
 @utility grid-bg {
   background-image:
-    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
   background-size: 60px 60px;
   mask-image: radial-gradient(ellipse 70% 60% at 50% 30%, black, transparent);
 }

@@ -91,7 +91,7 @@ export function HeroSection() {
             </a>
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 rounded-xl border border-white/10 px-6 py-3 text-sm font-semibold text-muted-foreground transition-colors hover:border-primary/40 hover:text-foreground"
+              className="inline-flex items-center gap-2 rounded-xl border border-border px-6 py-3 text-sm font-semibold text-muted-foreground transition-colors hover:border-primary/40 hover:text-foreground"
             >
               <Mail className="h-4 w-4" /> Contact Me
             </a>
@@ -99,10 +99,10 @@ export function HeroSection() {
 
           {/* Social row */}
           <div className="mt-10 flex items-center gap-4 text-muted-foreground">
-            <a href="https://github.com/" aria-label="GitHub" className="rounded-full glass p-2.5 transition-colors hover:text-primary">
+            <a href="https://github.com/GANESHSUTHOJU" aria-label="GitHub" className="rounded-full glass p-2.5 transition-colors hover:text-primary">
               <Github className="h-4 w-4" />
             </a>
-            <a href="https://linkedin.com/" aria-label="LinkedIn" className="rounded-full glass p-2.5 transition-colors hover:text-primary">
+            <a href="https://www.linkedin.com/in/ganesh-suthoju-389ab12a6/" aria-label="LinkedIn" className="rounded-full glass p-2.5 transition-colors hover:text-primary">
               <Linkedin className="h-4 w-4" />
             </a>
             <a href="mailto:suthojuganesh@gmail.com" aria-label="Email" className="rounded-full glass p-2.5 transition-colors hover:text-primary">

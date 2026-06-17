@@ -14,6 +14,7 @@ type Project = {
   highlights: string[];
   demoUrl?: string;
   githubUrl?: string;
+  image: string;
 };
 
 const PROJECTS: Project[] = [
@@ -26,6 +27,7 @@ const PROJECTS: Project[] = [
     category: "Full Stack",
     gradient: "from-cyan-400/30 to-blue-500/30",
     highlights: ["Role-based dashboards", "Real-time scheduling", "Secure auth & records", "Responsive UI"],
+    image: "/projects/healthcare_booking.png",
   },
   {
     title: "Learn-Flow AI",
@@ -36,6 +38,7 @@ const PROJECTS: Project[] = [
     category: "AI / GenAI",
     gradient: "from-violet-400/30 to-fuchsia-500/30",
     highlights: ["LLM-driven roadmaps", "Adaptive milestones", "Resource curation", "Progress analytics"],
+    image: "/projects/learn_flow.png",
   },
   {
     title: "Smart Retail Data Warehouse",
@@ -46,6 +49,7 @@ const PROJECTS: Project[] = [
     category: "Data",
     gradient: "from-cyan-400/30 to-emerald-500/30",
     highlights: ["Dimensional modeling", "Batch ETL", "Analytics-ready marts", "BI integration"],
+    image: "/projects/retail_warehouse.png",
   },
   {
     title: "Core Pay Links",
@@ -56,6 +60,7 @@ const PROJECTS: Project[] = [
     category: "Blockchain",
     gradient: "from-violet-400/30 to-cyan-500/30",
     highlights: ["On-chain settlement", "Shareable links", "Non-custodial", "Wallet integration"],
+    image: "/projects/core_pay.png",
   },
   {
     title: "AI Chatbot",
@@ -66,6 +71,7 @@ const PROJECTS: Project[] = [
     category: "AI",
     gradient: "from-fuchsia-400/30 to-cyan-500/30",
     highlights: ["Intent classification", "Context memory", "KB integration", "Streaming responses"],
+    image: "/projects/ai_chatbot.png",
   },
   {
     title: "Weather Forecast App",
@@ -76,6 +82,7 @@ const PROJECTS: Project[] = [
     category: "Web App",
     gradient: "from-cyan-400/30 to-violet-500/30",
     highlights: ["Geolocation", "Hourly forecasts", "Adaptive theme", "Mobile-first"],
+    image: "/projects/weather_app.png",
   },
 ];
 
@@ -100,14 +107,14 @@ export function ProjectsSection() {
               data-cursor="hover"
             >
               {/* Visual */}
-              <div className={`relative h-40 overflow-hidden bg-gradient-to-br ${p.gradient}`}>
-                <div className="absolute inset-0 grid-bg opacity-50" />
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="font-display text-4xl font-bold text-white/20 transition-transform duration-500 group-hover:scale-110">
-                    {p.title.split(" ").map((w) => w[0]).join("").slice(0, 3)}
-                  </div>
-                </div>
-                <span className="absolute left-3 top-3 rounded-full bg-black/40 px-2.5 py-1 font-mono text-[10px] uppercase tracking-widest text-white backdrop-blur">
+              <div className="relative h-40 overflow-hidden bg-zinc-950">
+                <img
+                  src={p.image}
+                  alt={p.title}
+                  className="h-full w-full object-cover object-top transition-transform duration-700 ease-out group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/80 via-zinc-950/20 to-transparent" />
+                <span className="absolute left-3 top-3 rounded-full bg-black/60 px-2.5 py-1 font-mono text-[10px] uppercase tracking-widest text-white backdrop-blur-md">
                   {p.category}
                 </span>
               </div>
@@ -121,7 +128,7 @@ export function ProjectsSection() {
 
                 <div className="mt-4 flex flex-wrap gap-1.5">
                   {p.tech.slice(0, 4).map((t) => (
-                    <span key={t} className="rounded-md border border-white/10 bg-white/5 px-2 py-0.5 font-mono text-[10px] text-muted-foreground">
+                    <span key={t} className="rounded-md border border-border bg-muted/50 px-2 py-0.5 font-mono text-[10px] text-muted-foreground">
                       {t}
                     </span>
                   ))}
@@ -162,7 +169,14 @@ export function ProjectsSection() {
             >
               <X className="h-4 w-4" />
             </button>
-            <div className={`h-32 -mx-6 -mt-6 sm:-mx-8 sm:-mt-8 rounded-t-2xl bg-gradient-to-br ${active.gradient}`} />
+            <div className="relative h-48 -mx-6 -mt-6 sm:-mx-8 sm:-mt-8 mb-6 overflow-hidden rounded-t-2xl bg-zinc-950">
+              <img
+                src={active.image}
+                alt={active.title}
+                className="h-full w-full object-cover object-top"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent" />
+            </div>
             <span className="mt-5 inline-block rounded-full bg-white/5 px-2.5 py-1 font-mono text-[10px] uppercase tracking-widest text-primary">
               {active.category}
             </span>
@@ -183,7 +197,7 @@ export function ProjectsSection() {
 
             <div className="mt-5 flex flex-wrap gap-1.5">
               {active.tech.map((t) => (
-                <span key={t} className="rounded-md border border-white/10 bg-white/5 px-2 py-0.5 font-mono text-[10px] text-muted-foreground">
+                <span key={t} className="rounded-md border border-border bg-muted/50 px-2 py-0.5 font-mono text-[10px] text-muted-foreground">
                   {t}
                 </span>
               ))}

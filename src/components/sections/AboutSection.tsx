@@ -110,7 +110,7 @@ export function AboutSection() {
           >
             <div className="glass-card p-6">
               <div className="text-xs font-mono uppercase tracking-widest text-muted-foreground">Journey</div>
-              <ol className="relative mt-5 space-y-6 border-l border-white/10 pl-6">
+              <ol className="relative mt-5 space-y-6 border-l border-border pl-6">
                 {TIMELINE.map((t) => (
                   <li key={t.year} className="relative">
                     <span className="absolute -left-[31px] top-1 grid h-4 w-4 place-items-center rounded-full bg-gradient-primary">

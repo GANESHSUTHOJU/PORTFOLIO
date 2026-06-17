@@ -96,7 +96,7 @@ export function SkillsSection() {
                       <span className="text-foreground/90">{it.name}</span>
                       <span className="font-mono text-xs text-muted-foreground">{it.level}%</span>
                     </div>
-                    <div className="mt-1.5 h-1.5 overflow-hidden rounded-full bg-white/5">
+                    <div className="mt-1.5 h-1.5 overflow-hidden rounded-full bg-muted">
                       <motion.div
                         initial={{ width: 0 }}
                         whileInView={{ width: `${it.level}%` }}
@@ -117,7 +117,7 @@ export function SkillsSection() {
           <div className="flex w-max animate-scroll-x gap-3 opacity-70">
             {[...Array(2)].flatMap((_, k) =>
               ["React", "Next.js", "TypeScript", "Node.js", "Python", "FastAPI", "MongoDB", "PostgreSQL", "Docker", "AWS", "Tailwind", "Framer Motion", "Three.js", "GenAI", "LangChain"].map((t) => (
-                <span key={`${k}-${t}`} className="rounded-full border border-white/10 px-4 py-1.5 font-mono text-xs text-muted-foreground">
+                <span key={`${k}-${t}`} className="rounded-full border border-border px-4 py-1.5 font-mono text-xs text-muted-foreground">
                   {t}
                 </span>
               ))

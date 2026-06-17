@@ -65,7 +65,7 @@ export function GithubSection() {
                 <Github className="h-5 w-5 text-primary" />
                 <span className="font-display font-semibold">Contribution Graph</span>
               </div>
-              <a href="https://github.com/" className="text-xs text-muted-foreground hover:text-primary">
+              <a href="https://github.com/GANESHSUTHOJU" className="text-xs text-muted-foreground hover:text-primary">
                 @suthojuganesh
               </a>
             </div>
